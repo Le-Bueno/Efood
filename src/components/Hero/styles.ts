@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import theme from '../../global/theme'
 import { Container } from '../../global/globalStyle'
-import Hero from '../../assets/icons/hero.png'
 
 export const HeroContainer = styled.header`
   width: 100%;
@@ -10,7 +9,7 @@ export const HeroContainer = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url(${Hero});
+  background: url('https://github.com/Le-Bueno/Efood/blob/main/src/assets/icons/hero.png?raw=true');
   background-size: cover;
   background-repeat: no-repeat;
 

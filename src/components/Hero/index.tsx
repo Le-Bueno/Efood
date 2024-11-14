@@ -6,8 +6,6 @@ import Logo from '../Logo'
 
 import { Container } from '../../global/globalStyle'
 
-import logo from '../../assets/icons/logo.png'
-
 import {
   HeroContainer,
   HeroHeader,
@@ -32,13 +30,28 @@ const Hero = ({ textContent, title }: HeroProps) => {
 
   function renderHeaderContent(item: string | undefined) {
     if (item === undefined) {
-      return <Logo kind="link" cover={logo} title="Logo eFood" to="/" />
+      return (
+        <Logo
+          kind="link"
+          cover="https://github.com/Le-Bueno/Efood/blob/main/src/assets/icons/logo.png?raw=true"
+          title="Logo eFood"
+          to="/"
+        />
+      )
     }
 
     return (
       <HeroHeader>
         <TitleLink to="/">{item}</TitleLink>
-        <Logo kind="link" cover={logo} title="Logo eFood" to="/" />
+        <Logo
+          kind="link"
+          cover="https://github.com/Le-Bueno/Efood/blob/main/src/assets/icons/logo.png?raw=true"
+          title="Logo eFood"
+          to="/"
+        />
+        <Title onClick={handleOpenCart}>
+          {items.length} produto(s) no carrinho
+        </Title>
       </HeroHeader>
     )
   }
